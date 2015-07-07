@@ -1,0 +1,29 @@
+#header {
+    background-color:orangered;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    width:200px;
+    float:right;
+    padding:5px;
+}
+#tasklist {
+    background-color:cornsilk;
+    color:darkslategrey;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    position: absolute;
+}
+#weekcal {
+    margin-top:-80px ;
+    line-height:90px;
+    z-index: -1;
+    left: 200px;
+    right: 50px;
+    position: absolute;
+}

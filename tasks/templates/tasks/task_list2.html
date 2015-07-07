@@ -1,0 +1,185 @@
+{% load staticfiles %}
+<style>
+    #header {
+    background-color:orangered;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+    #weekcal {
+    margin-top:10px ;
+    line-height:90px;
+    z-index: -1;
+    left: 100px;
+    right: 50px;
+    position: absolute;
+}
+    #nav {
+    background-color:#eeeeee;
+    width:200px;
+    padding:5px;
+    float: bottom;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+    }
+    #tasklist {
+    background-color:cornsilk;
+    color:darkslategrey;
+    clear:both;
+    text-align:center;
+    padding:5px;
+    position: absolute;
+    margin-top: 500px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+}
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'tasks/putintotasklist.css' %}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<title>EatWith Task List</title>
+<body>
+    <div id="header">
+        <center>
+            <h1>EatWith Task List!</h1>
+        </center>
+    </div>
+
+    <div id="weekcal">
+        <center>
+            <h2><br>
+                Week of {{ now }} to {{ nowplusseven }}
+            </h2>
+            <style>
+            table, th, td {
+                border: 1px solid black;
+                <!-- border-collapse: collapse; -->
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            </style>
+            </head>
+            <body>
+
+            <table class="table table-striped" style="width:400px">
+              <thread>
+                <tr>
+                  <th><i>Today: </i>{{ today }}</th>
+                  <th>{{ daytwo }}</th>
+                  <th>{{ daythree }}</th>
+                  <th>{{ dayfour }}</th>
+                  <th>{{ dayfive }}</th>
+                  <th>{{ daysix }}</th>
+                  <th>{{ dayseven }}</th>
+                </tr>
+              </thread>
+              <tbody>
+                <tr>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_today %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_two %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_three %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_four %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_five %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_six %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                  <th>
+                      {% if task_list %}
+                        {% for task in task_list %}
+                            {% if task.is_due_seven %}
+                                <i>{{task.date_due}}</i> <b>{{task.task_type}}</b> : {{ task.person_in_charge }} <br><br>
+                            {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+        </center>
+    </div>
+
+    <div id="tasklist">
+        <h2>Upcoming Tasks</h2>
+        <b><a href="{% url "task_new" %}">Add a new task.</a></b>
+        <ul>
+            {% for task in object_list %}
+                {% if task.to_show %}
+                <li><a href="{% url "task_edit" task.id %}">{{ task.task_type }}</a> :
+                    <b>{{ task.person_in_charge }}</b> | <i>{{ task.date_due }}</i>
+                    <a href="{% url "task_delete" task.id %}">delete</a>
+                </li>
+                {% endif %}
+            {% empty %}
+                <li>No tasks due!</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="nav">
+        <h3>Task descriptions</h3><br>
+        <b>Kitchen Duty: </b><br>
+        <font color="#777777">Clean dishes, etc.</font><br><br>
+        <b>P.O.C: </b><br>
+        <font color="#777777">Whatever a P.O.C. does!</font><br><br>
+        <b>Friday Chef: </b><br>
+        <font color="#777777">In charge of cooking lunch on Friday. </font><br><br>
+    </div>
+
+</body>

@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
+    *{
+        text-align: center;
+    }
+    #add{
+        margin-top:50px ;
+    }
+    p {
+        font-size:16px ;
+    }
+
+</style>
+
+<div id="add">
+<left>
+    <form method="post" class="form-horizontal">{% csrf_token %}
+        <div class="form-group">
+        {{ form.as_p }}
+        (Date is in MM/DD/YYYY format)
+        </div>
+        <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-default" value="Submit">Submit</button>
+        </div>
+    </form>
+</left>
+</div>

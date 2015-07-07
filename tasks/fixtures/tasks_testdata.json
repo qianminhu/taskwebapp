@@ -1,0 +1,11 @@
+[
+  {
+    "model": "tasks.Task",
+    "pk": 1,
+    "fields": {
+      "task_type": "testType",
+      "person_in_charge": "testPerson",
+      "date_due": "2015-10-10"
+    }
+  }
+]

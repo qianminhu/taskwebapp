@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
+    #delete{
+        margin-top:50px ;
+    }
+</style>
+
+
+<div id="delete">
+    <center>
+        <form method="post">{% csrf_token %}
+            <h3>Are you sure you want to delete "{{ task.task_type }}"?</h3><br>
+            <input type="submit" value="Yes" /><br><br>
+            <p>(If not, press back to go back to the task list page.)</p>
+        </form>
+    </center>
+</div>
