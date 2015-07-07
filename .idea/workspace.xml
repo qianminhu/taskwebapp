@@ -62,14 +62,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task_schedule/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56179774">
+            <state vertical-scroll-proportion="-11.111111">
               <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding>
                 <element signature="e#229#238#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.056179777">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -83,6 +93,7 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/task_schedule/settings.py" />
         <option value="$PROJECT_DIR$/task_schedule/wsgi.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -94,7 +105,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="115" />
+    <option name="x" value="764" />
     <option name="y" value="23" />
     <option name="width" value="1164" />
     <option name="height" value="707" />
@@ -359,7 +370,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="115" y="23" width="1164" height="707" extended-state="0" />
+    <frame x="764" y="23" width="1164" height="707" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -433,11 +444,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task_schedule/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56179774">
+        <state vertical-scroll-proportion="-11.111111">
           <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding>
             <element signature="e#229#238#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.056179777">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
