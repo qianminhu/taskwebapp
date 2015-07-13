@@ -34,7 +34,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9r1y3xw)@&y9orr9jh$l&8gesv$d3=0^+5%g$=01x*zvr9xxyh'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -54,12 +54,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tasks',
 ]
-
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'Tasksender'
-EMAIL_HOST_PASSWORD = 'Charlie123'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
 
 MIDDLEWARE_CLASSES = [
     'django.contrib.sessions.middleware.SessionMiddleware',
